@@ -1,0 +1,15 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "fixupxer-telegram-bot",
+	"main": "fixupxer_bot.py",
+	"compatibility_date": "2026-09-29",
+	"compatibility_flags": [
+		"python_workers"
+	],
+  "build": {
+    "command": "PYDANTIC_PURE_PYTHON=1 pip install -r requirements.txt --target ./src/lib"
+  },
+	"observability": {
+		"enabled": true
+	}
+}
